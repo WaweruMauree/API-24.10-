@@ -1,53 +1,44 @@
-# Hospital Management System
+# Simple REST API for Product Management
 
 ## Overview
+This project is a simple REST API built with Flask to manage products. Each product has a name, description, and price.
 
-The Hospital Management System is a simple yet effective Python application designed to manage patients and doctors within a hospital environment. It utilizes object-oriented programming principles to encapsulate the data and functionalities involved in handling hospital operations. The system enables users to add patients and doctors, manage appointments, and display relevant information.
+## Requirements
+- Python 3.x
+- Flask
+- Requests 
 
-## Features
+## Setup Instructions
 
-- Add and manage patient information (name, age, patient ID).
-- Add and manage doctor information (name, age, specialization).
-- Display detailed information about patients and doctors.
-- Simple interface for easy interaction with the system.
-
-## Installation
-
-To set up the Hospital Management System on your local machine, follow these steps:
-
-1. Clone the repository:
+1. **Clone the repository** (if applicable):
     ```bash
-    git clone https://github.com/yourusername/hospital-management-system.git
-    cd hospital-management-system
+    git clone [your-repo-url]
+    cd [repository-name]
     ```
 
-2. Ensure you have Python installed (version 3.x is recommended).
-
-3. Run the application using:
+2. **Install Flask**:
     ```bash
-    python hospital_system.py
+    pip install Flask
     ```
 
-## Usage
+3. **Run the API server**:
+    ```bash
+    python app.py
+    ```
+   The server should now be running on `http://127.0.0.1:5000`.
 
-### Creating Instances
+## Testing the API
 
-You can create instances for patients and doctors using the `Patient` and `Doctor` classes:
+You can test the API using the provided `client.py` script. 
 
-```python
-from hospital_system import Patient, Doctor
+1. **Install Requests**:
+    ```bash
+    pip install requests
+    ```
 
-# Creating a patient
-patient = Patient("Jane Doe", 28, "P001")
-
-# Creating a doctor
-doctor = Doctor("Dr. Smith", 40, "Cardiology")
-
-print(patient.display_info())  # Outputs: Patient ID: P001, Name: Jane Doe, Age: 28
-print(doctor.display_info())  # Outputs: Doctor Name: Dr. Smith, Age Specialization:Cardiology
-
-try:
-    person = Person("John Doe", 30)
-    person.display_info()  # This will raise NotImplementedError
-except NotImplementedError as e:
-    print(e)  # Outputs: Subclasses should implement this!
+2. **Run the client script**:
+    ```bash
+    python client.py
+    ```
+   
+This will add sample products and retrieve the product list.
